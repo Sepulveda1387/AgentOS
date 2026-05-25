@@ -22,9 +22,7 @@ service-account*.json
 token.json
 token*.pickle
 
-# Runtime memory database and generated SQLite sidecars
-memory/agentOS.db
-memory/*.db
+# Generated SQLite sidecars
 memory/*.db-*
 
 # Python/runtime caches

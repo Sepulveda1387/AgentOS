@@ -36,8 +36,8 @@ python3 memory/scripts/setup_runtime_files.py
 That creates:
 
 - `.env` from `.env.example`, with API key values left blank.
-- A local `.gitignore` that protects `.env`, credentials, runtime memory databases, caches, and machine-specific files.
-- `memory/agentOS.db`, rebuilt from the committed Markdown, skills, and workflows.
+- A local `.gitignore` that protects `.env`, credentials, SQLite sidecars, caches, and machine-specific files.
+- `memory/agentOS.db`, the clean operational index committed with the repo and refreshable from Markdown, skills, and workflows.
 
 ## Step 3 — Initialize Memory Manually (Optional)
 
@@ -75,7 +75,7 @@ git commit -m "Update context and logs"
 git push
 ```
 
-**What stays out of git after onboarding:** `.env`, `memory/agentOS.db`, credentials, and cache — all covered by the local `.gitignore` created during onboarding.
+**What stays out of git after onboarding:** `.env`, credentials, generated SQLite sidecars, and cache — all covered by the local `.gitignore` created during onboarding. The clean `memory/agentOS.db` is part of the operational system.
 
 > This repo is yours. Keep it private. Do not push to the public AgentOS template repo.
 
@@ -104,11 +104,11 @@ See `connections/` for examples (add your own as you go).
 The starter repository intentionally ships with no committed `.gitignore` so the full operational system can be committed to GitHub. During onboarding, AgentOS creates a local `.gitignore` with rules for:
 
 ```
-memory/agentOS.db
-memory/scripts/__pycache__/
 .env
 credentials/
 cache/
+memory/*.db-*
+memory/scripts/__pycache__/
 *.pyc
 ```
 

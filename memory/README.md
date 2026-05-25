@@ -4,7 +4,7 @@ AgentOS uses a two-layer memory system: Markdown for durable, human-readable con
 
 ## Database
 
-`memory/agentOS.db` — local only, gitignored. Regenerated at any time from source Markdown.
+`memory/agentOS.db` — clean operational index committed with the repo. Regenerated at any time from source Markdown.
 
 ## Scripts
 

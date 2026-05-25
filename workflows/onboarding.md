@@ -101,7 +101,7 @@ Run the deterministic setup helper:
 python3 memory/scripts/setup_runtime_files.py
 ```
 
-This creates `.env` from `.env.example` if `.env` does not already exist, then creates local `.gitignore` safety rules.
+This creates `.env` from `.env.example` if `.env` does not already exist, then creates local `.gitignore` safety rules. The clean `memory/agentOS.db` index is part of the operational system and remains tracked; generated SQLite sidecars are local-only.
 
 Leave all API key values blank or commented. Tell the user they can add keys later when an integration actually needs them. Never invent, request, echo, log, or commit credential values.
 
@@ -120,9 +120,7 @@ service-account*.json
 token.json
 token*.pickle
 
-# Runtime memory database and generated SQLite sidecars
-memory/agentOS.db
-memory/*.db
+# Generated SQLite sidecars
 memory/*.db-*
 
 # Python/runtime caches

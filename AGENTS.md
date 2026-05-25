@@ -52,7 +52,7 @@ The system is meeting its user for the first time. Your goal is to learn enough 
    ```bash
    python3 memory/scripts/setup_runtime_files.py
    ```
-   This creates `.env` if needed and creates a local `.gitignore` with rules for `.env`, credentials, runtime databases, caches, and machine-specific files. The template repo intentionally does not commit a `.gitignore`.
+   This creates `.env` if needed and creates a local `.gitignore` with rules for `.env`, credentials, generated SQLite sidecars, caches, and machine-specific files. The clean `memory/agentOS.db` index is part of the committed operational system. The template repo intentionally does not commit a `.gitignore`.
 4. Run memory initialization:
    ```bash
    python3 memory/scripts/init_db.py

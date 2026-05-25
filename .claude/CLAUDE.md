@@ -62,7 +62,7 @@ Once configured, it acts as a proactive partner: surfacing risks and opportuniti
 - Wait for each answer before proceeding.
 - After all 8 questions, summarize what you heard and ask for confirmation.
 - On confirmation, write answers into the context files (see `workflows/onboarding.md` for the exact procedure).
-- Create local runtime files by running `python3 memory/scripts/setup_runtime_files.py`. This creates `.env` if needed and creates a local `.gitignore` with rules for `.env`, credentials, runtime databases, caches, and machine-specific files. The template repo intentionally does not commit a `.gitignore`.
+- Create local runtime files by running `python3 memory/scripts/setup_runtime_files.py`. This creates `.env` if needed and creates a local `.gitignore` with rules for `.env`, credentials, generated SQLite sidecars, caches, and machine-specific files. The clean `memory/agentOS.db` index is part of the committed operational system. The template repo intentionally does not commit a `.gitignore`.
 - Run memory initialization (see **Memory Commands** below).
 - Say "You're set up. What would you like to work on first?"
 
@@ -182,7 +182,7 @@ python memory\scripts\pattern_report.py
 python memory\scripts\register_assets.py
 ```
 
-The database lives at `memory/agentOS.db` after onboarding. It is local runtime state and can be regenerated at any time with `init_db.py` + `index_markdown.py`.
+The clean operational index lives at `memory/agentOS.db` and is committed with the repo. It can be regenerated at any time with `init_db.py` + `index_markdown.py`.
 
 **Tables:** `knowledge_items`, `knowledge_fts` (FTS search), `usage_events`, `patterns`, `skill_registry`, `workflow_registry`, `decisions`, `recommendations`, `learnings`, `checkpoints`, `archive_candidates`.
 
@@ -213,7 +213,7 @@ The database lives at `memory/agentOS.db` after onboarding. It is local runtime 
 | `workflows/chief-ai-engineering.md` | AI model selection, prompt strategy, and paid API guardrails |
 | `workflows/video-research-ingestion.md` | Convert videos and training recordings into notes, workflows, and verified takeaways |
 | `memory/` | SQLite schema, database, Python scripts |
-| `memory/agentOS.db` | Local runtime database created during onboarding |
+| `memory/agentOS.db` | Clean operational memory index committed with the repo and refreshed during onboarding |
 | `.codex/skills/` | Approved enabled skills — invoke when request clearly matches |
 | `.codex/skills-drafts/` | Proposed skills — **never invoke automatically** |
 | `docs/` | Onboarding and setup documentation |
