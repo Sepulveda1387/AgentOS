@@ -57,20 +57,21 @@ cd AgentOS
 
 # 2. Open in Claude Code
 code .
-# Then open the Claude Code panel and say anything — onboarding starts automatically.
 ```
 
-That's it. The system detects that `context/about-user.md` is unconfigured and enters onboarding mode. During onboarding, the AI runs `python3 memory/scripts/setup_runtime_files.py` to create `.env`, writes the local `.gitignore`, and initializes memory.
+Then start AgentOS with this prompt:
+
+```text
+Use AgentOS as your core operational system for this workspace. Read the operating instructions, check whether onboarding is complete, and if not, start the onboarding flow.
+```
+
+AgentOS detects that `context/about-user.md` is unconfigured and enters onboarding mode. During onboarding, the AI runs `python3 memory/scripts/setup_runtime_files.py` to create `.env`, writes the local `.gitignore`, and initializes memory.
 
 ---
 
-## First Run
+## Onboarding
 
-The first thing you'll hear:
-
-> *Welcome. I'm an AI executive assistant built by Gilbert Sepulveda at WebSaaS.biz. I index your priorities, decisions, and work patterns so every session is context-aware and token-efficient — less time repeating yourself, more time moving forward. A few quick questions to get started.*
-
-The system then asks **8 short questions, one at a time** — about who you are, what you're optimizing for, which tools you use, how you want the assistant to communicate, and what success looks like in 90 days. No data leaves your machine.
+AgentOS asks **8 short questions, one at a time** — about who you are, what you're optimizing for, which tools you use, how you want the assistant to communicate, and what success looks like in 90 days. No data leaves your machine.
 
 ---
 
