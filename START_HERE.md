@@ -14,8 +14,9 @@ When you open this workspace for the first time in Claude Code or another Claude
 2. Ask you **8 short questions, one at a time** — no forms, no clipboard paste required.
 3. Summarize what it heard and ask you to confirm.
 4. Write your answers into the right context files.
-5. Initialize the memory database.
-6. Be ready to work.
+5. Create your local `.env` and local `.gitignore`.
+6. Initialize and refresh the memory database.
+7. Be ready to work.
 
 The whole thing takes about 3 minutes.
 
@@ -54,6 +55,13 @@ Just describe what you need. You don't have to use any special commands or call 
 
 - "Plan my day" → routes to the daily command center
 - "Review my pipeline" → routes to the pipeline or advisory review
+- "Check this pricing or budget risk" → routes to the CFO Financial Risk Analyst
+- "Map this workflow bottleneck" → routes to the COO Business Operations Analyst
+- "Review this landing page message" → routes to the CMO Funnel / Messaging Analyst
+- "Tighten this offer or client journey" → routes to the CPO Offer / Client Experience Analyst
+- "Review lead quality or sales follow-up" → routes to the CRO Pipeline / Revenue Analyst
+- "Check claims, contracts, or privacy risk" → routes to the Legal/Risk Compliance / Claims Analyst
+- "Can I trust this dashboard?" → routes to the CDO Data Quality Analyst
 - "Help me prep for a call with [company]" → routes to company research
 - "Something broke" → routes to systematic debugging
 - "Which AI model should I use for this?" → routes to chief AI engineering
@@ -95,7 +103,9 @@ Commit and push any time you add meaningful context. See `docs/setup.md` for the
 
 Keep the system useful with a few habits:
 
+- Run `python3 memory/scripts/setup_runtime_files.py` during onboarding or whenever you need to recreate local `.env` and `.gitignore`.
 - Run `python3 memory/scripts/index_markdown.py` after adding or editing context files.
+- Run `python3 memory/scripts/register_assets.py` after adding or approving skills or workflows.
 - Add dated notes to `logs/` after significant decisions or changes.
 - When a repeated task deserves a shortcut, say "let's make this a workflow."
 - Review `context/priorities.md` every week or two to keep it current.
@@ -113,6 +123,7 @@ Keep the system useful with a few habits:
 | `context/voice.md` | How the AI communicates with you |
 | `workflows/capability-routing.md` | How requests get routed to the right skill or workflow |
 | `memory/scripts/` | Python scripts for memory management |
+| `memory/agentOS.db` | Clean operational memory index committed with AgentOS |
 
 ---
 

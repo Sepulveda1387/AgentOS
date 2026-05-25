@@ -12,10 +12,11 @@ AgentOS uses a two-layer memory system: Markdown for durable, human-readable con
 |--------|---------|
 | `init_db.py` | Initialize or reset the database schema |
 | `index_markdown.py` | Index all Markdown files into SQLite + FTS |
+| `register_assets.py` | Register approved skills and workflows in the registry |
+| `setup_runtime_files.py` | Create local `.env` and local `.gitignore` during onboarding |
 | `search_memory.py "query"` | Full-text search across indexed content |
 | `log_event.py` | Log a usage event |
 | `pattern_report.py` | Self-learning pattern analysis |
-| `register_assets.py` | Register skills and workflows in the registry |
 | `recommendations.py` | List, add, or close recommendations |
 | `skill_draft.py` | Scaffold a new draft skill |
 | `log_learning.py` | Log a typed learning with confidence |
@@ -27,6 +28,7 @@ AgentOS uses a two-layer memory system: Markdown for durable, human-readable con
 
 ```bash
 python3 memory/scripts/init_db.py
+python3 memory/scripts/register_assets.py
 python3 memory/scripts/index_markdown.py
 python3 memory/scripts/search_memory.py "priorities"
 ```
@@ -57,9 +59,14 @@ Run `index_markdown.py` after:
 
 ## .gitignore
 
-The database file is excluded from version control:
+AgentOS does not commit a `.gitignore`. During onboarding, `setup_runtime_files.py` creates a local `.gitignore` for secrets and generated runtime files. The clean `memory/agentOS.db` file is committed as part of the operational system.
+
+Local-only files after onboarding:
+
 ```
-memory/agentOS.db
-memory/__pycache__/
 .env
+credentials/
+memory/*.db-*
+memory/__pycache__/
+__pycache__/
 ```
