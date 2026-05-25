@@ -62,7 +62,7 @@ Once configured, it acts as a proactive partner: surfacing risks and opportuniti
 - Wait for each answer before proceeding.
 - After all 8 questions, summarize what you heard and ask for confirmation.
 - On confirmation, write answers into the context files (see `workflows/onboarding.md` for the exact procedure).
-- Create local runtime files by running `python3 memory/scripts/setup_runtime_files.py`. This creates `.env` if needed and replaces the starter `.gitignore` with local ignore rules for `.env`, credentials, runtime databases, caches, and machine-specific files.
+- Create local runtime files by running `python3 memory/scripts/setup_runtime_files.py`. This creates `.env` if needed and creates a local `.gitignore` with rules for `.env`, credentials, runtime databases, caches, and machine-specific files. The template repo intentionally does not commit a `.gitignore`.
 - Run memory initialization (see **Memory Commands** below).
 - Say "You're set up. What would you like to work on first?"
 

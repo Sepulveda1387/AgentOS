@@ -101,7 +101,7 @@ See `connections/` for examples (add your own as you go).
 
 ## Local Gitignore
 
-The starter repository intentionally ships with no active ignore rules so the full operational system can be committed to GitHub. During onboarding, AgentOS writes local ignore rules for:
+The starter repository intentionally ships with no committed `.gitignore` so the full operational system can be committed to GitHub. During onboarding, AgentOS creates a local `.gitignore` with rules for:
 
 ```
 memory/agentOS.db

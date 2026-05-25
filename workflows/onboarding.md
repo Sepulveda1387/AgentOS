@@ -101,7 +101,7 @@ Run the deterministic setup helper:
 python3 memory/scripts/setup_runtime_files.py
 ```
 
-This creates `.env` from `.env.example` if `.env` does not already exist, then writes local `.gitignore` safety rules.
+This creates `.env` from `.env.example` if `.env` does not already exist, then creates local `.gitignore` safety rules.
 
 Leave all API key values blank or commented. Tell the user they can add keys later when an integration actually needs them. Never invent, request, echo, log, or commit credential values.
 

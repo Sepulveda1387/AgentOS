@@ -52,7 +52,7 @@ The system is meeting its user for the first time. Your goal is to learn enough 
    ```bash
    python3 memory/scripts/setup_runtime_files.py
    ```
-   This creates `.env` if needed and replaces the starter `.gitignore` with local ignore rules for `.env`, credentials, runtime databases, caches, and machine-specific files.
+   This creates `.env` if needed and creates a local `.gitignore` with rules for `.env`, credentials, runtime databases, caches, and machine-specific files. The template repo intentionally does not commit a `.gitignore`.
 4. Run memory initialization:
    ```bash
    python3 memory/scripts/init_db.py

@@ -1,6 +1,0 @@
-# AgentOS starter repository
-#
-# This file intentionally contains no ignore rules so the full operational
-# system can be published from the template repository. During onboarding,
-# the AI creates the local ignore rules for secrets, runtime memory databases,
-# credentials, caches, and machine-specific files.
