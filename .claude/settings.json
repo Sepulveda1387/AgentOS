@@ -1,0 +1,40 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 memory/scripts/init_db.py)",
+      "Bash(python3 memory/scripts/index_markdown.py)",
+      "Bash(python3 memory/scripts/register_assets.py)",
+      "Bash(python3 memory/scripts/setup_runtime_files.py)",
+      "Bash(python3 memory/scripts/pattern_report.py)",
+      "Bash(python3 memory/scripts/recommendations.py)",
+      "Bash(python3 memory/scripts/list_checkpoints.py)",
+      "Bash(python3 memory/scripts/search_learnings.py*)",
+      "Bash(python3 memory/scripts/search_memory.py*)",
+      "Bash(python3 memory/scripts/log_event.py*)",
+      "Bash(python3 memory/scripts/log_learning.py*)",
+      "Bash(python3 memory/scripts/log_checkpoint.py*)",
+      "Bash(python3 memory/scripts/skill_draft.py*)",
+      "Bash(python memory/scripts/init_db.py)",
+      "Bash(python memory/scripts/index_markdown.py)",
+      "Bash(python memory/scripts/register_assets.py)",
+      "Bash(python memory/scripts/setup_runtime_files.py)",
+      "Bash(python memory/scripts/pattern_report.py)",
+      "Bash(python memory/scripts/recommendations.py)",
+      "Bash(python memory/scripts/list_checkpoints.py)",
+      "Bash(python memory/scripts/search_learnings.py*)",
+      "Bash(python memory/scripts/search_memory.py*)",
+      "Bash(python memory/scripts/log_event.py*)",
+      "Bash(python memory/scripts/log_learning.py*)",
+      "Bash(python memory/scripts/log_checkpoint.py*)",
+      "Bash(python memory/scripts/skill_draft.py*)",
+      "Bash(find . -not -path '*/.git/*' -not -path '*/memory/agentOS.db' | sort)",
+      "Bash(find . -name '*.md' -not -path '*/.git/*' | sort)",
+      "Bash(find . -name 'SKILL.md' | sort)",
+      "Bash(ls*)",
+      "Bash(git status)",
+      "Bash(git log*)",
+      "Bash(git diff*)",
+      "Read(**)"
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "MarkItDown"
+  short_description: "Convert files and URLs to Markdown"
+  default_prompt: "Convert this document or source into clean Markdown and summarize the useful context."

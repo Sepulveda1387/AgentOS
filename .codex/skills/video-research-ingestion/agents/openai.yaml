@@ -1,0 +1,4 @@
+interface:
+  display_name: "Video Research Ingestion"
+  short_description: "Turn videos and training recordings into transcripts, frame-based notes, workflows, and verified takeaways."
+  default_prompt: "Use the video-research-ingestion skill to extract transcript, visual evidence, claims, best practices, and reusable operating guidance from this video."

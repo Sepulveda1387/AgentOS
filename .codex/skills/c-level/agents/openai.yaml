@@ -1,0 +1,4 @@
+interface:
+  display_name: "C-Level Board Review"
+  short_description: "Evaluate decisions through CEO, CFO, CMO, COO, and CPO lenses."
+  default_prompt: "Use the c-level skill to evaluate this prompt from a chief executive board perspective and synthesize the collective recommendation."

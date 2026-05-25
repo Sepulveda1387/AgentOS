@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chief AI Engineering"
+  short_description: "Choose models, prompts, and AI workflows with cost, capability, and intent preservation in mind."
+  default_prompt: "Use the chief-ai-engineering skill to recommend the right model, prompt strategy, cost guardrails, and verification path for this AI task."
