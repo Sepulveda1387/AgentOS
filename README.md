@@ -133,7 +133,7 @@ A local SQLite database (`memory/agentOS.db`) stores:
 - Learnings, decisions, and recommendations
 - Session checkpoints
 
-The database is created during onboarding and rebuilds from your Markdown files using `index_markdown.py`. The starter repo ships with the full operational source; onboarding writes local ignore rules for runtime files and secrets.
+The clean operational database is committed with the repo and rebuilds from Markdown using `index_markdown.py`. The starter repo ships with the full operational source; onboarding writes local ignore rules for runtime sidecars and secrets.
 
 ### Self-Improvement Loop
 When the same task recurs 3 or more times, the system proposes a draft skill. You review, approve, and the capability becomes part of the OS — auto-invoked forever after.
