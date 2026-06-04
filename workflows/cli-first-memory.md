@@ -79,7 +79,7 @@ Only read source files if the search returns no relevant results.
 
 ## Database Location
 
-`memory/agentOS.db` — local only, gitignored. Regenerated from Markdown via `init_db.py` + `index_markdown.py`.
+`memory/agentOS.db` — clean operational index committed with the repo. Generated SQLite sidecars such as `memory/*.db-*` stay local-only. Regenerate the clean index from Markdown via `init_db.py` + `index_markdown.py`.
 
 ---
 

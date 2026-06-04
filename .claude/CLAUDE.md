@@ -212,6 +212,8 @@ The clean operational index lives at `memory/agentOS.db` and is committed with t
 | `workflows/cli-first-memory.md` | Memory and index operating pattern |
 | `workflows/chief-ai-engineering.md` | AI model selection, prompt strategy, and paid API guardrails |
 | `workflows/video-research-ingestion.md` | Convert videos and training recordings into notes, workflows, and verified takeaways |
+| `workflows/subagent-delegation.md` | Safe delegation to scoped helper agents, with main-thread synthesis |
+| `workflows/agentos-audit.md` | Review AgentOS for context, routing, capability, memory, safety, and portability gaps |
 | `memory/` | SQLite schema, database, Python scripts |
 | `memory/agentOS.db` | Clean operational memory index committed with the repo and refreshed during onboarding |
 | `.codex/skills/` | Approved enabled skills — invoke when request clearly matches |
@@ -308,6 +310,8 @@ The following skills are pre-installed and ready:
 | `service-delivery-qa` | QA before delivering, presenting, publishing, or relying on client-facing or operationally important work |
 | `systematic-debugging` | Root-cause debugging for broken tools, workflows, APIs, authentication, memory, or integrations |
 | `verification-before-completion` | Evidence gate before claiming work is complete, fixed, ready, migrated, authenticated, or indexed |
+| `agentos-audit` workflow | Audit AgentOS, score the system, find gaps, improve reusable operating patterns |
+| `subagent-delegation` workflow | Use helper agents, split work across roles, or run parallel specialist reviews |
 | `cfo-financial-risk-analyst` | Financial analysis, pricing, margin, cash timing, revenue quality, budget, or financial decision support |
 | `coo-business-operations-analyst` | Operations analysis, workflow diagnosis, capacity, handoffs, SOPs, or delivery reliability |
 | `cmo-funnel-messaging-analyst` | Funnel analysis, messaging clarity, CTA consistency, SEO/AEO, nurture, or conversion risk |

@@ -65,6 +65,8 @@ Just describe what you need. You don't have to use any special commands or call 
 - "Help me prep for a call with [company]" → routes to company research
 - "Something broke" → routes to systematic debugging
 - "Which AI model should I use for this?" → routes to chief AI engineering
+- "Use a researcher and reviewer on this" → routes to subagent delegation
+- "Audit AgentOS and find what to improve" → routes to AgentOS audit
 - "Summarize this training video and extract the steps" → routes to video research ingestion
 - "What should I be doing this week?" → routes to weekly review
 - "Help me draft a message to [person]" → drafts, asks for approval before sending
@@ -122,6 +124,8 @@ Keep the system useful with a few habits:
 | `context/priorities.md` | Current goals and focus |
 | `context/voice.md` | How the AI communicates with you |
 | `workflows/capability-routing.md` | How requests get routed to the right skill or workflow |
+| `workflows/subagent-delegation.md` | How to safely split work across helper agents |
+| `workflows/agentos-audit.md` | How to review AgentOS and find improvement gaps |
 | `memory/scripts/` | Python scripts for memory management |
 | `memory/agentOS.db` | Clean operational memory index committed with AgentOS |
 

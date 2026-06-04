@@ -37,6 +37,8 @@ The AI uses this workflow to infer the right skill or workflow from any request.
 | Which AI model should we use, AI prompt strategy, paid AI API, model cost, credits, KIE, generate ads/docs/social without losing intent | `chief-ai-engineering` skill |
 | Watch a video, learn from a training recording, summarize a tutorial, extract frames/transcript, validate video claims, turn a video into workflow/skill | `video-research-ingestion` skill |
 | Patterns, self-learning, what should we automate, what keeps coming up, what have you noticed | `self-learning-review` skill |
+| Audit AgentOS, review this operating system, score the system, find OS gaps, improve AgentOS | `agentos-audit` workflow |
+| Use subagents, delegate this, parallel agents, create helper agents, split work across roles | `subagent-delegation` workflow |
 | Onboarding is incomplete / re-run setup | `onboarding` workflow |
 | Add/update context, remember this, note that | Update relevant `context/` file |
 | Search memory, what do we know about | `python3 memory/scripts/search_memory.py` |
@@ -63,6 +65,8 @@ When a request crosses functions, apply lenses in sequence:
 - **Client-facing deliverable**: use `service-delivery-qa` before presenting, publishing, or relying on the asset.
 - **Sensitive or external-system change**: use `business-risk-review` before proposing or taking action.
 - **Completion claim**: use `verification-before-completion` before saying work is complete, ready, migrated, fixed, or indexed.
+- **Delegated work**: use `subagent-delegation`, then synthesize in the main AgentOS thread before acting.
+- **AgentOS change**: use `agentos-audit` when reviewing system gaps, then refresh memory and verify indexes after durable edits.
 
 ---
 

@@ -226,6 +226,8 @@ Skills in `.codex/skills/` are approved and auto-invoked by intent — the user 
 | `service-delivery-qa` | User is delivering, presenting, publishing, or relying on an important client-facing or operational asset |
 | `systematic-debugging` | Something is broken, failing, flaky, not authenticated, not syncing, not indexing, or not working |
 | `verification-before-completion` | Before claiming work is complete, fixed, migrated, authenticated, indexed, installed, ready, current, or safe |
+| `agentos-audit` workflow | User asks to audit AgentOS, review the operating system, score the system, find gaps, add reusable best practices, or improve AgentOS itself |
+| `subagent-delegation` workflow | User asks to use subagents, delegate work, split work across helper agents, or run parallel specialist reviews |
 | `cfo-financial-risk-analyst` | User asks for financial analysis, pricing, margin, cash timing, revenue quality, budget, or financial decision support |
 | `coo-business-operations-analyst` | User asks for business operations analysis, workflow diagnosis, capacity planning, handoffs, SOPs, or delivery reliability |
 | `cmo-funnel-messaging-analyst` | User asks for funnel analysis, messaging clarity, CTA consistency, SEO/AEO, nurture, content, or conversion risk |
@@ -250,7 +252,7 @@ python3 memory/scripts/index_markdown.py
 | Folder | Purpose |
 |--------|---------|
 | `context/` | Durable facts: user profile, system profile, priorities, voice, decisions, executive board |
-| `workflows/` | Repeatable process specs: routing, onboarding, daily loop, weekly review, memory |
+| `workflows/` | Repeatable process specs: routing, onboarding, daily loop, weekly review, memory, delegation, audits |
 | `.codex/skills/` | Approved enabled skills — auto-invoked by intent |
 | `.codex/skills-drafts/` | Proposed skills waiting for approval — never invoke automatically |
 | `memory/` | SQLite schema, database, Python scripts |

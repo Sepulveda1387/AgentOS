@@ -42,6 +42,7 @@ AgentOS is a local, Git-friendly AI operating system workspace. Open it in [Clau
 - **Auto-routing by intent.** You don't name skills or workflows — the system infers what you need and routes automatically.
 - **Persistent memory.** SQLite-backed index of your priorities, decisions, and patterns. Searchable. Updated after every durable change.
 - **Self-improvement loop.** Recurring tasks get proposed as draft skills. You approve; the system gets faster.
+- **Reusable specialist agents.** Executive, analyst, researcher, implementer, and reviewer roles can be delegated when the work benefits from clean separation.
 - **Multi-model protocol.** Every AI model that opens this workspace — Claude, GPT, Gemini, or any other — is bound by the same operating rules.
 
 ---
@@ -109,6 +110,8 @@ These skills are active out of the box and **auto-invoked by intent** — you ne
 | `service-delivery-qa` | QA before delivering, presenting, publishing, or relying on important work |
 | `systematic-debugging` | Root-cause debugging for failing tools, workflows, APIs, memory, or integrations |
 | `verification-before-completion` | Evidence check before claiming work is complete, fixed, ready, migrated, or indexed |
+| `agentos-audit` workflow | Auditing AgentOS, scoring the system, finding OS gaps, adding reusable best practices |
+| `subagent-delegation` workflow | Delegating work to helper agents, running parallel specialist reviews, separating implementation/review/research |
 | `cfo-financial-risk-analyst` | Financial analysis, pricing, margin, cash timing, revenue quality, budget, financial risk |
 | `coo-business-operations-analyst` | Operations analysis, workflow diagnosis, capacity, handoffs, SOPs, delivery reliability |
 | `cmo-funnel-messaging-analyst` | Funnel analysis, messaging clarity, CTA consistency, SEO/AEO, nurture, conversion risk |
@@ -209,6 +212,9 @@ Run `index_markdown.py` and `register_assets.py` after any durable content or sk
 | [`context/about-user.md`](context/about-user.md) | Your profile — onboarding trigger file |
 | [`workflows/capability-routing.md`](workflows/capability-routing.md) | How requests are routed to skills and workflows |
 | [`workflows/onboarding.md`](workflows/onboarding.md) | Onboarding question flow and write procedure |
+| [`workflows/subagent-delegation.md`](workflows/subagent-delegation.md) | Standards for safe, scoped helper-agent work |
+| [`workflows/agentos-audit.md`](workflows/agentos-audit.md) | Review workflow for improving AgentOS itself |
+| [`docs/reusable-agentos-patterns.md`](docs/reusable-agentos-patterns.md) | Portable best practices and suggested specialist-agent bench |
 
 ---
 
